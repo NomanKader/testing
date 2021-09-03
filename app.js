@@ -12,4 +12,8 @@ app.get('/', (req,res) =>
         .pipe(res)
 );
 
+app.get('/user', (req,res) => {
+    res.status(200).json({message: 'Hello!'});
+});
+
 app.listen(HTTP_PORT, () => console.log(`http server is running at http://localhost:${HTTP_PORT}`));
